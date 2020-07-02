@@ -10,7 +10,7 @@ composer require michalkortas/webservicentlm
 
 Register new ServiceProvider in config/app.php
 ```php
-michalkortas\LaravelForms\LaravelFormsServiceProvider::class
+michalkortas\WebserviceNtlm\WebserviceNtlmProvider::class
 ```
 
 Register new Alias in config/app.php
