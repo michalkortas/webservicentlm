@@ -6,7 +6,7 @@ MIT
 ```
 composer require michalkortas/webservicentlm
 ```
-###Laravel 5.5 and earlier
+### Laravel 5.5 and earlier
 
 Register new ServiceProvider in config/app.php
 ```php
@@ -18,7 +18,7 @@ Register new Alias in config/app.php
 'NtlmSoapService' => michalkortas\WebserviceNtlm\Services\NtlmSoapService::class
 ```
 ## Usage
-####Set credentials
+#### Set credentials
 Just add to your .enf file:
 ```php
 NTLM_DOMAIN="domain"
@@ -26,7 +26,7 @@ NTLM_USER="user"
 NTLM_PASSWORD="password"
 ```
 
-####Init connection
+#### Init connection
 ```php
 $client = NtlmSoapService::initClient('https://your_webservice_url');
 $data = $client->webserviceMethod();
@@ -56,7 +56,7 @@ Add credential name as second initClient() param:
 $client = NtlmSoapService::initClient('https://other_webservice_url', 'other_credentials');
 $data = $client->webserviceMethod();
 ```
-####Headers
+#### Headers
 If you want add some headers to connection, just type:
 ```php
 $client = NtlmSoapService::initClient('https://your_webservice_url');
@@ -67,7 +67,7 @@ $client->__setSoapHeaders($header);
 $data = $client->webserviceMethod();
 ```
 
-####Get last request
+#### Get last request
 If you want to show last request (e.g. send XML), check __getLastRequest() method:
 ```php
 $client = NtlmSoapService::initClient('https://your_webservice_url');
