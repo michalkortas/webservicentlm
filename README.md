@@ -6,7 +6,8 @@ MIT
 ```
 composer require michalkortas/webservicentlm
 ```
-###Laravel <5.6
+###Laravel 5.5 and earlier
+
 Register new ServiceProvider in config/app.php
 ```php
 michalkortas\LaravelForms\LaravelFormsServiceProvider::class
