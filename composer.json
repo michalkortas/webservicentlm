@@ -1,0 +1,39 @@
+{
+    "name": "michalkortas/webservicentlm",
+    "description": "Override default SoapClient class to connect webservice with NTLM Windows authentication",
+    "type": "library",
+    "keywords": [
+        "ntlm",
+        "windows",
+        "soap",
+        "webservice",
+        "domain",
+        "active directory",
+        "authentication"
+    ],
+    "homepage": "https://webroad.dev/packages/webservicentlm/documentation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michal Kortas",
+            "email": "michal@webroad.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "michalkortas\\WebserviceNtlm\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "michalkortas\\WebserviceNtlm\\WebserviceNtlmProvider"
+            ],
+            "aliases": {
+                "NtlmSoapService": "michalkortas\\WebserviceNtlm\\Services\\NtlmSoapService"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
